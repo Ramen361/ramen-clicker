@@ -1,8 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
 button {
     font-size: 30px;
     width: 280px;
     height: 100px;
     background-color: aliceblue;
     font: bold 20px Arial, sans-serif;
-    align-self: center;
 }
