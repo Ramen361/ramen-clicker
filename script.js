@@ -1,4 +1,3 @@
-
 const countButton = document.getElementById('count');
 
 countButton.addEventListener('click', function() {
