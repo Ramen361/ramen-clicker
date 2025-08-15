@@ -1,22 +1,17 @@
-const countButton = document.getElementById('count');
 
-countButton.addEventListener('click', function() {
-    let current = parseInt(countButton.textContent, 10);
-    countButton.textContent = current + 1;
-});
+const clickButton = document.getElementById('click-btn');
+const clickDisplay = document.getElementById('click-count');
+
 let clicks = parseInt(localStorage.getItem('clicks')) || 0;
 
 
 function updateClickDisplay() {
-    document.getElementById('click-count').textContent = clicks;
+    clickDisplay.textContent = clicks;
 }
 
 
-document.getElementById('click-btn').addEventListener('click', function() {
+clickButton.addEventListener('click', function() {
     clicks++;
-    localStorage.setItem('clicks', clicks); 
+    localStorage.setItem('clicks', clicks);
     updateClickDisplay();
 });
-
-
-updateClickDisplay();
