@@ -1,8 +1,7 @@
 #count {
-    size: 70px;
     font-size: 30px;
-    width: 80px;
-    height: 40px;
+    width: 120px;
+    height: 60px;
     background-color: aliceblue;
     font: bold 20px Arial, sans-serif;
 }
