@@ -31,7 +31,7 @@ upgradeButton.addEventListener('click', function() {
     if (clicks >= upgradeCost) {
         clicks -= upgradeCost;
         upgradeCost = Math.ceil(upgradeCost * 1.15);
-        clickValue = clickValue * 2; // Double the click value
+        clickValue = clickValue * 2; 
         localStorage.setItem('clicks', clicks);
         localStorage.setItem('upgradeCost', upgradeCost);
         localStorage.setItem('clickValue', clickValue);
@@ -39,6 +39,43 @@ upgradeButton.addEventListener('click', function() {
         updateUpgradeCostDisplay();
     }
 });
+
+updateClickDisplay();
+updateUpgradeCostDisplay();
+
+
+
+const clickValueDisplay = document.getElementById('click-value');
+
+function updateClickValueDisplay() {
+    if (clickValueDisplay) {
+        clickValueDisplay.textContent = `Click Power: ${clickValue}`;
+    }
+}
+
+
+function updateClickDisplay() {
+    clickDisplay.textContent = Math.floor(clicks);
+    updateClickValueDisplay();
+}
+
+
+
+
+upgradeButton.addEventListener('click', function() {
+    if (clicks >= upgradeCost) {
+        clicks -= upgradeCost;
+        upgradeCost = Math.ceil(upgradeCost * 1.15);
+        clickValue = clickValue * 2; 
+        localStorage.setItem('clicks', clicks);
+        localStorage.setItem('upgradeCost', upgradeCost);
+        localStorage.setItem('clickValue', clickValue);
+        updateClickDisplay();
+        updateUpgradeCostDisplay();
+    }
+});
+
+
 
 updateClickDisplay();
 updateUpgradeCostDisplay();
