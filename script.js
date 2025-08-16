@@ -29,3 +29,8 @@ upgradeButton.addEventListener('click', function() {
         updateClickDisplay();
         updateUpgradeCostDisplay();
     }
+});
+
+// Add these lines to initialize the display on page load
+updateClickDisplay();
+updateUpgradeCostDisplay();
