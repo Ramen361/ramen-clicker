@@ -3,8 +3,11 @@ const clickDisplay = document.getElementById('click-count');
 const upgradeButton = document.getElementById('upgrade-btn');
 const upgradeCostDisplay = document.getElementById('upgrade-cost');
 
-let clicks = parseInt(localStorage.getItem('clicks')) || 0;
-let upgradeCost = parseInt(localStorage.getItem('upgradeCost')) || 100;
+let clicks = parseInt(localStorage.getItem('clicks'), 10);
+if (isNaN(clicks)) clicks = 0;
+
+let upgradeCost = parseInt(localStorage.getItem('upgradeCost'), 10);
+if (isNaN(upgradeCost)) upgradeCost = 100;
 
 function updateClickDisplay() {
     clickDisplay.textContent = clicks;
@@ -31,6 +34,5 @@ upgradeButton.addEventListener('click', function() {
     }
 });
 
-// Add these lines to initialize the display on page load
 updateClickDisplay();
 updateUpgradeCostDisplay();
