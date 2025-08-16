@@ -41,17 +41,19 @@ function updateClickValueDisplay() {
     }
 }
 
+
 clickButton.addEventListener('click', function() {
     clicks += clickValue;
     localStorage.setItem('clicks', clicks);
     updateClickDisplay();
 });
 
+
 upgradeButton.addEventListener('click', function() {
     if (clicks >= upgradeCost) {
         clicks -= upgradeCost;
         upgradeCost = Math.ceil(upgradeCost * 1.15);
-        clickValue = clickValue * 2; 
+        clickValue *= 2;
         localStorage.setItem('clicks', clicks);
         localStorage.setItem('upgradeCost', upgradeCost);
         localStorage.setItem('clickValue', clickValue);
@@ -59,7 +61,6 @@ upgradeButton.addEventListener('click', function() {
         updateUpgradeCostDisplay();
     }
 });
-
 
 
 autoUpgradeButton.addEventListener('click', function() {
@@ -83,6 +84,7 @@ setInterval(function() {
         updateClickDisplay();
     }
 }, 1000);
+
 
 updateClickDisplay();
 updateUpgradeCostDisplay();
