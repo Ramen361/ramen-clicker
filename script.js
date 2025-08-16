@@ -2,6 +2,7 @@
 const clickButton = document.getElementById('click-btn');
 const clickDisplay = document.getElementById('click-count');
 
+
 let clicks = parseInt(localStorage.getItem('clicks')) || 0;
 
 
@@ -15,3 +16,6 @@ clickButton.addEventListener('click', function() {
     localStorage.setItem('clicks', clicks);
     updateClickDisplay();
 });
+
+
+updateClickDisplay();
