@@ -53,7 +53,7 @@ upgradeButton.addEventListener('click', function() {
     if (clicks >= upgradeCost) {
         clicks -= upgradeCost;
         upgradeCost = Math.ceil(upgradeCost * 1.15);
-        clickValue *= 2;
+        clickValue *= 0.2;
         localStorage.setItem('clicks', clicks);
         localStorage.setItem('upgradeCost', upgradeCost);
         localStorage.setItem('clickValue', clickValue);
