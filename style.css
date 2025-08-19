@@ -57,6 +57,19 @@ button {
     font-weight: bold;
 }
 
+
+#upgrade-btn2 {
+    width: auto;
+    height: 50px;
+    padding: 0 16px;
+    border-radius: 25px;
+    font-size: 18px;
+    background: #ffe7a0;
+    border: 2px solid #e0c97f;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-weight: bold;
+}
+
 #click-value {
     width: 100%;
     text-align: center;
