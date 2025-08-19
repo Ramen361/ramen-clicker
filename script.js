@@ -3,7 +3,7 @@ const clickDisplay = document.getElementById('click-count');
 const upgradeButton = document.getElementById('upgrade-btn');
 const upgradeCostDisplay = document.getElementById('upgrade-cost');
 const autoUpgradeButton = document.getElementById('auto-upgrade-btn');
-const autoUpgradeCostDisplay = document.getElementById('upgrade-btn2-cost');
+const autoUpgradeCostDisplay = document.getElementById('auto-upgrade-cost');
 const clickValueDisplay = document.getElementById('click-value');
 
 let clicks = parseInt(localStorage.getItem('clicks'), 10);
